@@ -17,7 +17,9 @@ public class MetodosDe_Biseccion {
     public static void main(String[] args) {
         Tabla B = new Tabla();
         B.setLocationRelativeTo(null);
+
         B.setVisible(true);
+        B.show();
     }
 
 }

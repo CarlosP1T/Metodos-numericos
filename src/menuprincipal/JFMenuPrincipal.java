@@ -6,7 +6,7 @@
 package menuprincipal;
 
 import newton.Newton;
-import metodo_secante.secan;
+import metodo_secante.Secante;
 import metodosde_biseccion.Tabla;
 import puntofijo.PuntoFijo;
 
@@ -86,19 +86,15 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(147, 147, 147)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(cmdBiseccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cmdPunto_fijo, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cmdNewtom)
-                        .addGap(64, 64, 64))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(Secante)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(cmdPunto_fijo, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(cmdBiseccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cmdNewtom, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
+                    .addComponent(Secante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(55, 55, 55))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -106,12 +102,9 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(60, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cmdBiseccion)
                             .addComponent(cmdNewtom))
@@ -119,7 +112,11 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(cmdPunto_fijo)
                             .addComponent(Secante))
-                        .addGap(32, 32, 32))))
+                        .addGap(32, 32, 32))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         setJMenuBar(jMenuBar1);
@@ -138,26 +135,24 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cmdBiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBiseccionActionPerformed
-
-        Tabla t = new Tabla();
-        t.setVisible(true);
-
-
-    }//GEN-LAST:event_cmdBiseccionActionPerformed
+    private void cmdPunto_fijoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPunto_fijoActionPerformed
+        PuntoFijo P = new PuntoFijo();
+        P.setVisible(true);
+    }//GEN-LAST:event_cmdPunto_fijoActionPerformed
 
     private void cmdNewtomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdNewtomActionPerformed
         Newton n = new Newton();
         n.setVisible(true);// TODO add your handling code here:
     }//GEN-LAST:event_cmdNewtomActionPerformed
 
-    private void cmdPunto_fijoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdPunto_fijoActionPerformed
-        PuntoFijo P = new PuntoFijo();
-        P.setVisible(true);
-    }//GEN-LAST:event_cmdPunto_fijoActionPerformed
+    private void cmdBiseccionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdBiseccionActionPerformed
+
+        Tabla t = new Tabla();
+        t.setVisible(true);
+    }//GEN-LAST:event_cmdBiseccionActionPerformed
 
     private void SecanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SecanteActionPerformed
-        secan s = new secan();
+        Secante s=new Secante();
         s.setVisible(true);
     }//GEN-LAST:event_SecanteActionPerformed
 
